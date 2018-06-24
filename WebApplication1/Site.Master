@@ -65,6 +65,25 @@ body{
     }
 }
 
+.modal {
+}
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+}
     </style>
 
 
@@ -132,6 +151,33 @@ body{
                     </button>
              
                 </div>
+
+
+
+            <%--                <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/Login.aspx"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink">
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="false"
+        SiteMapProvider="SiteMap" />
+                <asp:Menu ID="NavigationMenu" runat="server" DataSourceID="SiteMapDataSource1" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" OnMenuItemDataBound="OnMenuItemDataBound">
+                    <LevelMenuItemStyles>
+                        <asp:MenuItemStyle CssClass="main_menu" />
+                        <asp:MenuItemStyle CssClass="level_menu" />
+                    </LevelMenuItemStyles>
+                </asp:Menu>
+            </div>--%>
+        </div>
+
+
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a   href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
@@ -148,67 +194,106 @@ body{
                                 <li role="separator" class="divider"></li>
                                 <li class="dropdown-header">PHP</li>
                                 <li><a href="contactus.html#">MySQl</a></li>
-                           
+
+ 
+
                             </ul>
-                        </li>
+
+                        
                         <li><a href="#"><span class="fa fa-envelope-o"></span> Contact</a></li>
                     
                     
     
                     </ul>
                    <ul class="nav navbar-nav navbar-right">
-                       <li><a data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> login</a></li>
-                    </ul>
-                                              
-       
+                   <%--<li><a data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> login</a></li>--%>
+                    <%if (HttpContext.Current.User.Identity.IsAuthenticated)
+                          Response.Write("<li><a href='Login.aspx'><span class='glyphicon glyphicon-log-out'></span> logout</a></li>");
+                      else
+                          Response.Write("<li><a data-toggle='modal' data-target='#loginModal'><span class='glyphicon glyphicon-log-in'></span> login</a></li>");%> 
+                   
+                         <li>                     
+                     <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a  data-toggle='modal' data-target='#loginModal' ID="HeadLoginStatus" runat="server"><span class='glyphicon glyphicon-log-in'></span> login</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                    <div class="glyphicon glyphicon-log-in">
+                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!<br />
+                        <span class='glyphicon glyphicon-log-in'></span>
+                        <span class='glyphicon glyphicon-log-in'></span>
+                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/Login.aspx"/>
+                    </div>
+                    </LoggedInTemplate>
+                </asp:LoginView>
+                </li>   
+                      </ul>
                 </div>
             </div>
        </nav>
     
-        <div id="loginModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"> &times;</button>
-                        <h4>Login</h4>
-                    </div>
-                    <div class="modal-body">
-      
-                           <div class="form-group">
-                               <label class="sr-only" for="email">Email</label>
-                               <%--<input type="text" class="form-control input-sm" placeholder="Email" id="email" name="email">--%>
-                               <asp:TextBox ID="User" runat="server" class="form-control input-sm"></asp:TextBox>
-                               </div>
-                                <div class="form-group">  
-                          
-                                   <label class="sr-only" for="password">Password</label>
-                                    <asp:TextBox ID="Password" runat="server" class="form-control input-sm"></asp:TextBox></div>
-                                   <div class="checkbox">
-                                       <label>
-                                           <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me" />
-                                       </label>
-                                   </div>
-                                
-                      
-                        
-                               <asp:Button ID="Button1" runat="server" OnClick="ValidateUser" Text="Sign in" class="btn btn-info btn-xs"/>
-                               <asp:button runat="server" Text="Cancel" class="btn btn-default btn-xs" data-dismiss="modal"/> 
-                                             </div>
-                    </div>
-                    </div>
-    <!--
-                <div class="modal-footer">
-                    <div style="padding:10px"></div>
-                </div>
-    -->
-                </div>
-            </div>
-        </div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="vertical-alignment-helper">
+          <div class="modal-dialog modal-sm">
+          <div class="vertical-align-center">
+            <div class="modal-content">
+				<div class="loginmodal-container">
+					<h1>Login to Account</h1><br>
+		
+                  <center>
+					<asp:TextBox ID="User" runat="server" class="form-control input-sm" placeholder="UserName"></asp:TextBox>
+                    <br />
+					<asp:TextBox ID="Password" runat="server" class="form-control input-sm" placeholder="Password"></asp:TextBox>
+                    <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me" />
+                    <br />
+					<asp:Button runat="server" OnClick="ValidateUser" Text="Sign in" class="btn btn-info btn-sm"/>
+                    <asp:button  runat="server" Text="Cancel" class="btn btn-default btn-sm" data-dismiss="modal"/> 
+                    
+                    </center>
+
+					
+				  <div class="login-help">
+					<a data-toggle="modal" data-target="#registerModal" data-dismiss="modal">Register</a>
+				  </div>
+				</div>
+			</div>
+		  </div>
+    </div>
+    </div>
+    </div>
 
 
 
 
-
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="vertical-alignment-helper">
+          <div class="modal-dialog modal-sm">
+          <div class="vertical-align-center">
+            <div class="modal-content">
+				<div class="loginmodal-container">
+					<h1>Register to Account</h1><br>
+				  
+                  <center>
+					<asp:TextBox ID="TextBox1" runat="server" class="form-control input-sm" placeholder="UserName"></asp:TextBox>
+                    <br />
+					<asp:TextBox ID="TextBox2" runat="server" class="form-control input-sm" placeholder="Password"></asp:TextBox>
+                    <asp:CheckBox ID="CheckBox1" runat="server" Text="Remember me" />
+                    <br />
+					<asp:Button ID="Button1" runat="server" OnClick="ValidateUser" Text="Sign in" class="btn btn-info btn-sm"/>
+                    <asp:button ID="Button2"  runat="server" Text="Cancel" class="btn btn-default btn-sm" data-dismiss="modal"/> 
+                    
+                    </center>
+				 
+					
+				  <div class="login-help">
+					<a data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Login</a>
+				  </div>
+				</div>
+			</div>
+		  </div>
+    </div>
+    </div>
+    </div>
 
             <%--<div class="loginDisplay">
                 <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
