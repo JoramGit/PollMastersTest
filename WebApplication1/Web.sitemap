@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title="Home" description="" roles ="*">
+    <!--<siteMapNode url="~/Home.aspx" title="Home" description="Home Page" roles="*" />-->
+    <siteMapNode url="javascript:;" title="Admin" description="Admin Page" roles ="Administrator">
+      <!--<siteMapNode url ="~/Admin/Events.aspx" title="Events" description="Events" roles ="Administrator"></siteMapNode>-->
+      <siteMapNode url ="~/Admin/SendEmail.aspx" title="Send email test" description="Send Email Test" roles ="Administrator"></siteMapNode>
+       <siteMapNode url ="~/Admin/Users.aspx" title="Users" description="Users" roles ="Administrator"></siteMapNode>
+      <siteMapNode url ="~/Admin/TestPage.aspx" title="TestPage" description="TestPage" roles ="Administrator"></siteMapNode>
+    </siteMapNode>
+    <!--<siteMapNode url="~/UserGroups.aspx" title="User Groups" description="User Groups" roles="*" />-->
+    <siteMapNode url="~/Events.aspx" title="Events" description="Events" roles="*" />
+    <siteMapNode url="~/Invite.aspx" title="Invite" description="Invite" roles="*" />
+    <!--<siteMapNode url ="~/EventUsers.aspx" title="Users" description="Users" roles ="*"/>-->
+  </siteMapNode>
+  </siteMap>
