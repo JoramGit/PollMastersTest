@@ -14,7 +14,6 @@ namespace WebApplication1
     public partial class Login : System.Web.UI.Page
     {
 
-        
         protected void ValidateUser(object sender, EventArgs e)
         {
             int userId = 0;

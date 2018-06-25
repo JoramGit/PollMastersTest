@@ -80,6 +80,12 @@ namespace WebApplication1
         //    }
         //}
 
+        protected void Logout(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session.RemoveAll();
+            Session.Abandon();
+        }
         protected void ValidateUser(object sender, EventArgs e)
         {
             int userId = 0;
@@ -144,5 +150,6 @@ namespace WebApplication1
                 }
             }
         }
+
     }
 }
