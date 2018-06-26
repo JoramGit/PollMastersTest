@@ -92,7 +92,7 @@ body{
     margin-top: 20px;
 }
 .carousel .item{
-    min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+    min-height: 900px; /* Prevent carousel from being distorted if for some reason image doesn't load */
 }
 .carousel .item img{
     margin: 0 auto; /* Align slide image horizontally center */
@@ -203,9 +203,8 @@ body{
     .item:nth-child(1) {
       background: url('Pics/betting.jpg');
   background-size: auto;
-  background-position: center center;
+  background-position:center center;
   background-repeat: no-repeat;
-  min-height: 280px;
     }
 
     .item:nth-child(2) {
@@ -255,6 +254,8 @@ body{
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/css/footable.min.css" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/js/footable.min.js"></script>
+ 
+ 
     <script type="text/javascript">
         /* Applied Responsive For Grid View using footable js*/
         $(function () {
@@ -386,8 +387,12 @@ body{
         } (window.jQuery);
 
         $('#carouselFade').carousel();
+
     </script>
 
+     <script type="text/javascript">
+         $('#loginModal').modal();
+</script>
 
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">   </asp:ContentPlaceHolder>
 
@@ -543,7 +548,8 @@ body{
     </div>
     </div>
     </div>
-
+    <br />
+ 
 
 <div style='text-align:center;'>
 </div>
@@ -581,6 +587,9 @@ body{
             <span class="sr-only">Next</span>--%>
         </a>
     </div>
+
+
+
 
  <%--<div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Carousel indicators -->
@@ -632,15 +641,15 @@ body{
                 </asp:Menu>
             </div>
         </div>--%>
-       <div class="main">
-
+ <%--      <div class="main">
+--%>
             <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
-        </div>
+<%--        </div>
         <div class="clear">
         </div>
   
     <div class="footer">
         
-    </div>
+    </div>--%>
 </form>
 </body>

@@ -1,21 +1,5 @@
-C:\Users\js250503\Documents\Visual Studio 2010\Projects\WebApplication1\WebApplication1\bin\WebApplication1.dll
-C:\Users\js250503\Documents\Visual Studio 2010\Projects\WebApplication1\WebApplication1\bin\WebApplication1.pdb
-C:\Users\js250503\Documents\Visual Studio 2010\Projects\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
-C:\Users\js250503\Documents\Visual Studio 2010\Projects\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
-C:\Users\joram\Documents\Visual Studio 2010\Projects\PollMasters\WebApplication1\bin\WebApplication1.dll
-C:\Users\joram\Documents\Visual Studio 2010\Projects\PollMasters\WebApplication1\bin\WebApplication1.pdb
-C:\Users\joram\Documents\Visual Studio 2010\Projects\PollMasters\WebApplication1\obj\Debug\WebApplication1.dll
-C:\Users\joram\Documents\Visual Studio 2010\Projects\PollMasters\WebApplication1\obj\Debug\WebApplication1.pdb
-<<<<<<< HEAD
 C:\Users\js250503\Documents\Visual Studio 2010\Projects\PollMastersTest\WebApplication1\bin\WebApplication1.dll
 C:\Users\js250503\Documents\Visual Studio 2010\Projects\PollMastersTest\WebApplication1\bin\WebApplication1.pdb
 C:\Users\js250503\Documents\Visual Studio 2010\Projects\PollMastersTest\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
 C:\Users\js250503\Documents\Visual Studio 2010\Projects\PollMastersTest\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\js250503\Documents\Visual Studio 2010\Projects\PollMastersTest\WebApplication1\obj\Debug\WebApplication1.pdb
-=======
-C:\Users\joram\Documents\Visual Studio 2010\Projects\PollMastersTest\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
-C:\Users\joram\Documents\Visual Studio 2010\Projects\PollMastersTest\WebApplication1\obj\Debug\WebApplication1.dll
-C:\Users\joram\Documents\Visual Studio 2010\Projects\PollMastersTest\WebApplication1\bin\WebApplication1.dll
-C:\Users\joram\Documents\Visual Studio 2010\Projects\PollMastersTest\WebApplication1\bin\WebApplication1.pdb
-C:\Users\joram\Documents\Visual Studio 2010\Projects\PollMastersTest\WebApplication1\obj\Debug\WebApplication1.pdb
->>>>>>> 0f32ea96862f2ac89d80cb7b042d1290d70da140
