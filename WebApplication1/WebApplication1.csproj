@@ -59,6 +59,10 @@
     <Content Include="Admin\ChangePassword.aspx" />
     <Content Include="Admin\ChangePasswordSuccess.aspx" />
     <Content Include="Deactivate.aspx" />
+    <Content Include="Pics\betting.jpg" />
+    <Content Include="Pics\soccer.jfif" />
+    <Content Include="Pics\soccer2.jpg" />
+    <Content Include="Pics\sports.jpg" />
     <Content Include="PollResults.aspx" />
     <Content Include="EmailInvitationTemplate.htm" />
     <Content Include="Invite.aspx" />
@@ -72,6 +76,8 @@
     <Content Include="EmailPollTemplate.htm" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\wowslider.js" />
+    <Content Include="Scripts\SliderScript.js" />
     <Content Include="Scripts\LoginScripts.js" />
     <Content Include="Scripts\npm.js" />
     <Content Include="SimpleASP.aspx" />
@@ -83,6 +89,8 @@
     <Content Include="Styles\Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Styles\Login.css" />
     <Content Include="Admin\TestPage.aspx" />
+    <Content Include="Styles\Slider.css" />
+    <Content Include="Test.aspx" />
     <Content Include="UserEvents.aspx" />
     <Content Include="EventUsers.aspx" />
     <Content Include="Admin\Users.aspx" />
@@ -135,6 +143,13 @@
     </Compile>
     <Compile Include="Deactivate.aspx.designer.cs">
       <DependentUpon>Deactivate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.Master.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.Master.designer.cs">
+      <DependentUpon>Login.Master</DependentUpon>
     </Compile>
     <Compile Include="PollResults.aspx.cs">
       <DependentUpon>PollResults.aspx</DependentUpon>
@@ -195,6 +210,13 @@
     </Compile>
     <Compile Include="Admin\TestPage.aspx.designer.cs">
       <DependentUpon>TestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserEvents.aspx.cs">
       <DependentUpon>UserEvents.aspx</DependentUpon>
@@ -273,6 +295,7 @@
     <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Login.Master" />
     <None Include="Styles\bootstrap-theme.css.map" />
     <None Include="Styles\bootstrap-theme.min.css.map" />
     <None Include="Styles\bootstrap.css.map" />
